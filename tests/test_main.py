@@ -8,7 +8,10 @@ def test_read_root():
     """Test root endpoint"""
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json()["message"] == "Hello from FastAPI!"
+    assert (
+        response.json()["message"]
+        == "Hello from FastAPI! This is your host Dan Hricko!"
+    )
 
 
 def test_health_check():
