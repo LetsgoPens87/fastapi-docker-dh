@@ -6,7 +6,10 @@ app = FastAPI(title="Simple API", version="1.0.0")
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello from FastAPI! This is your host Dan Hricko", "version": "3.0.0"}
+    return {
+        "message": "Hello from FastAPI! This is your host Dan Hricko",
+        "version": "3.0.0",
+    }
 
 
 @app.get("/health")
